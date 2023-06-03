@@ -1,0 +1,70 @@
+.container {
+    display: flex;
+    padding: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .main-image {
+    display: flex;
+    margin-right: 20px;
+    text-align: center;
+  }
+  .main-image img{
+    width: 750px;
+    height: 470px;
+    border-radius: 30px;
+  }
+  .main-image div{
+    padding: 0px 30px ;
+    justify-content: center;
+    text-align: left;
+  }
+  p,h1{
+    color: gray;
+  }
+  
+  .small-images {
+    text-align: left;
+    margin-left: -40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .small-images img {
+    margin: 5px;
+    border-radius: 20px;
+    width: 135px;
+    height: 110px;
+    cursor: pointer;
+  }
+  
+  .small-images .arrow-button {
+    font-size: 24px;
+    padding: 8px 12px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .small-images img.active {
+    border: 2px solid blue;
+  }
+
+  .playbutton{
+    margin: 20px;
+    padding-left: 210px;
+    border-radius: 50%;
+  }
+  .playbutton button{
+    background-color: #5cc8f3;
+    border: 2px solid #5cc8f3 ;
+    color: white;
+    padding: 10px;
+
+    width: 70px;
+    font-size: 40px;
+    border-radius: 50%;
+  }
+  

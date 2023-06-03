@@ -1,51 +1,114 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import "./styles.css";
 
 export const Image = () => {
   const image_array = [
     {
-      title: "Image 1",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      image_url: "https://example.com/image1.jpg",
+      title: "War And Love",
+      description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+      image_url:
+        "https://c4.wallpaperflare.com/wallpaper/115/600/48/peace-versus-war-wallpaper-preview.jpg"
     },
     {
-      title: "Image 2",
+      title: "Beloved",
       description:
-        "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image_url: "https://example.com/image2.jpg",
+        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid qui dolorem eum fugiat quo voluptas nulla",
+      image_url:
+        "https://ichef.bbci.co.uk/news/976/cpsprodpb/178E5/production/_115758469_055840857.jpg"
     },
     {
-      title: "Image 3",
+      title: "Think",
       description:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      image_url: "https://example.com/image3.jpg",
+        "Natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+      image_url:
+        "https://static.boredpanda.com/blog/wp-content/uploads/2015/12/tanks-taken-over-by-nature__880.jpg"
     },
     {
-      title: "Image 4",
+      title: "Select Data",
       description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      image_url: "https://example.com/image4.jpg",
+        "Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur",
+      image_url:
+        "https://c4.wallpaperflare.com/wallpaper/311/75/587/god-of-war-2018-god-of-war-wallpaper-preview.jpg"
     },
     {
-      title: "Image 5",
+      title: "Never End",
       description:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image_url: "https://example.com/image5.jpg",
-    },
-    {
-      title: "Image 6",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      image_url: "https://example.com/image6.jpg",
-    },
+        "Drspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+      image_url:
+        "https://moewalls.com/wp-content/uploads/2022/10/the-mountain-god-of-war-thumb.jpg"
+    }
   ];
 
+  const [currentImage, setCurrentImage] = useState(image_array[0].image_url);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isSlideshowPlaying, setIsSlideshowPlaying] = useState(false);
+
+  const changeImage = (index) => {
+    setCurrentImage(image_array[index].image_url);
+    setCurrentIndex(index);
+  };
+
+  const goToPreviousImage = () => {
+    const newIndex = currentIndex === 0 ? image_array.length - 1 : currentIndex - 1;
+    changeImage(newIndex);
+  };
+
+  const goToNextImage = () => {
+    const newIndex = currentIndex === image_array.length - 1 ? 0 : currentIndex + 1;
+    changeImage(newIndex);
+  };
+
+  useEffect(() => {
+    let slideshowTimer;
+
+    if (isSlideshowPlaying) {
+      slideshowTimer = setInterval(goToNextImage, 3000);
+    }
+
+    return () => {
+      clearInterval(slideshowTimer);
+    };
+  }, [currentIndex, isSlideshowPlaying]);
+
+  const handlePlayPauseSlideshow = () => {
+    setIsSlideshowPlaying((prevState) => !prevState);
+  };
+
   return (
-    <div>
-      {image_array.map((el) => (
+    <div className="container">
+      <div className="main-image">
+        <img src={currentImage} alt="" />
         <div>
-          <h4>{el.description}</h4>
-          <img src={el.image_url} alt="" />
+          <h1>{image_array.find((el) => el.image_url === currentImage)?.title}</h1>
+          <p>
+            {image_array.find((el) => el.image_url === currentImage)?.description}
+          </p>
+         
         </div>
-      ))}
+      </div>
+      <div className="small-images">
+        <button className="arrow-button" onClick={goToPreviousImage}>
+        ◀
+        </button>
+        {image_array.map((el, index) => (
+          <img
+            key={el.image_url}
+            className={currentImage === el.image_url ? "active" : ""}
+            src={el.image_url}
+            alt=""
+            onClick={() => changeImage(index)}
+          />
+        ))}
+        <button className="arrow-button" onClick={goToNextImage}>
+        ▶
+        </button>
+        <div className="playbutton">
+        <button onClick={handlePlayPauseSlideshow}>
+            {isSlideshowPlaying ? "||" : "►"}
+          </button>
+        </div>
+       
+      </div>
     </div>
   );
 };
