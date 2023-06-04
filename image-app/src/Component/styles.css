@@ -71,7 +71,7 @@ p, h1 {
   border-radius: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1268px) {
   .container {
     padding: 20px;
   }
@@ -151,8 +151,6 @@ p, h1 {
   }
 
   .playbutton button {
-    padding: 8px;
-    width: 50px;
-    font-size: 30px;
+   display: none;
   }
 }
