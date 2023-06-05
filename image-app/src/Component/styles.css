@@ -18,12 +18,12 @@
 
 .main-image div {
   padding: 0px 30px;
-  justify-content: center;
   text-align: left;
 }
 
 p, h1 {
   color: gray;
+  justify-content: center;
 }
 
 .small-images {
@@ -121,7 +121,7 @@ p, h1 {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 792px) {
   .container {
     padding: 30px;
   }
@@ -144,13 +144,15 @@ p, h1 {
     font-size: 22px;
     padding: 6px 10px;
   }
+ .small-images{
 
+  display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+  padding: 30px;
+  gap: 20px;
+ }
   .playbutton {
-    margin: 15px;
-    padding-left: 150px;
-  }
-
-  .playbutton button {
-   display: none;
+    padding-left: 250px;
+    margin-top: -200px;
   }
 }
