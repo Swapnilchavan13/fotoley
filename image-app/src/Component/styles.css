@@ -112,6 +112,7 @@ p, h1 {
   .playbutton {
     margin: 10px;
     padding-left: 100px;
+
   }
 
   .playbutton button {
@@ -130,7 +131,6 @@ p, h1 {
     width: 600px;
     height: auto;
   }
-
   .main-image div {
     padding: 10px 20px;
   }
