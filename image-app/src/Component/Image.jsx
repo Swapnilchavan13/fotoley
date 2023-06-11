@@ -118,7 +118,11 @@ fetch("https://fakestoreapi.com/products")
         <button className="arrow-button" onClick={goToNextImage}>
           ▶
         </button>
-      
+        <div className="playbutton">
+          <button onClick={handlePlayPauseSlideshow}>
+            {isSlideshowPlaying ? "||" : "►"}
+          </button>
+        </div>
       </div>
     </div>
   );
